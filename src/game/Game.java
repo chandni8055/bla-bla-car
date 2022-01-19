@@ -1,11 +1,13 @@
 package game;
 
+import util.Util;
+
 import java.util.Scanner;
 
 public class Game {
     public static void main(String[] args) throws Exception {
         System.out.println("Welcome to Bla-BlaCar Application\n\t Your Ride Your Choice");
-        String nationality = "Indian";
+        String nationality = Util.enterString("Please enter are you foreign or native?");
         Scanner scanner= new Scanner(System.in);
         String services = "1: Find Ride\n" +
                 "2: Offer Ride\n" +
@@ -14,7 +16,7 @@ public class Game {
         while(true){
             String information = " ";
             if(nationality.equalsIgnoreCase("foreign")){
-                information = "LG12345";
+                information = Util.enterString("Enter your passport id");
                 System.out.println("checking passport id for:" +information);
                 Thread.sleep(5000);
                 System.out.println("process completed successfull");
