@@ -1,7 +1,9 @@
 package game;
 
+import serviceUtil.Service;
 import util.Util;
 
+import java.rmi.server.ServerCloneException;
 import java.util.Scanner;
 
 public class Game {
@@ -32,15 +34,15 @@ public class Game {
             System.out.println(services);
             int menu = scanner.nextInt();
             if(menu==1){
-                //TODO: menu 1
+                Service.menu1();
                 break;
             }
             else if(menu==2){
-                //TODO: menu 1
+                Service.menu2();
                 break;
             }
             else if(menu==3){
-                //TODO: menu 1
+                Service.menu3();
                 break;
             }
             else if(menu==0){
